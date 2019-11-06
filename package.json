@@ -1,0 +1,8 @@
+{
+  "name": "whats-cookin",
+  "version": "0.0.1",
+  "description": "Digitized card game",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
