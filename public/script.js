@@ -37,4 +37,8 @@ $(function () {
 	socket.on('response games', function(games){
 		$('#messages').append($('<li>').text(JSON.stringify(games)));
     });
+	
+	socket.on('game info', function(info){
+		$('#messages').append($('<li>').text(JSON.stringify(info)));
+    });
 });
