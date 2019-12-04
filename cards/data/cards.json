@@ -1,0 +1,353 @@
+[
+{
+	"name": "Bread",
+	"type": "Carbs",
+	"value": [4, 3, 2],
+	"count": 5,
+	"mod_text":"",
+	"mod":{},
+	"img":"bread.png"
+},
+{
+	"name": "Rice",
+	"type": "Carbs",
+	"value": [3, 3, 3],
+	"count": 5,
+	"mod_text":"",
+	"mod":{},
+	"img":"rice.png"
+},
+{
+	"name": "Oat",
+	"type": "Carbs",
+	"value": [5, 1, 1],
+	"count": 3,
+	"mod_text":"",
+	"mod":{},
+	"img":"oat.png"
+},
+{
+	"name": "Potatoes",
+	"type": "Carbs",
+	"value": [3, 3, 3],
+	"count": 5,
+	"mod_text":"",
+	"mod":{},
+	"img":"potatoes.png"
+},
+{
+	"name": "Quinoa",
+	"type": "Carbs",
+	"value": [2, 4, 3],
+	"count": 2,
+	"mod_text":"+2 each vegetable",
+	"mod":{},
+	"img":"quinoa.png"
+},
+{
+	"name": "Pasta",
+	"type": "Carbs",
+	"value": [1, 4, 5],
+	"count": 5,
+	"mod_text":"",
+	"mod":{},
+	"img":"pasta.png"
+},
+{
+	"name": "Chips",
+	"type": "Carbs",
+	"value": [1, 5, 3],
+	"count": 2,
+	"mod_text":"",
+	"mod":{},
+	"img":"chips.png"
+},
+{
+	"name": "Tortilla",
+	"type": "Carbs",
+	"value": [1, 3, 5],
+	"count": 2,
+	"mod_text":"",
+	"mod":{},
+	"img":"tortilla.png"
+},
+{
+	"name": "Beans",
+	"type": "Protein",
+	"value": [1, 3, 3],
+	"count": 3,
+	"mod_text":"+2 with rice",
+	"mod":{},
+	"img":"beans.png"
+},
+{
+	"name": "Chicken",
+	"type": "Protein",
+	"value": [4, 6, 6],
+	"count": 3,
+	"mod_text":"",
+	"mod":{},
+	"img":"chicken.png"
+},
+{
+	"name": "Turkey",
+	"type": "Protein",
+	"value": [2, 5, 7],
+	"count": 2,
+	"mod_text":"",
+	"mod":{},
+	"img":"turkey.png"
+},
+{
+	"name": "Burger",
+	"type": "Protein",
+	"value": [1, 5, 5],
+	"count": 3,
+	"mod_text":"+1 for each tomato/lettuce",
+	"mod":{},
+	"img":"burger.png"
+},
+{
+	"name": "Steak",
+	"type": "Protein",
+	"value": [4, 6, 8],
+	"count": 2,
+	"mod_text":"",
+	"mod":{},
+	"img":"steak.png"
+},
+{
+	"name": "Chop",
+	"type": "Protein",
+	"value": [1, 6, 7],
+	"count": 3,
+	"mod_text":"",
+	"mod":{},
+	"img":"chop.png"
+},
+{
+	"name": "Bacon",
+	"type": "Protein",
+	"value": [5, 4, 3],
+	"count": 3,
+	"mod_text":"+2 with eggs",
+	"mod":{},
+	"img":"bacon.png"
+},
+{
+	"name": "Cheese",
+	"type": "Protein",
+	"value": [3, 3, 3],
+	"count": 3,
+	"mod_text":"+2 with burger or chip",
+	"mod":{},
+	"img":"cheese.png"
+},
+{
+	"name": "Tofu",
+	"type": "Protein",
+	"value": [1, 4, 6],
+	"count": 2,
+	"mod_text":"",
+	"mod":{},
+	"img":"tofu.png"
+},
+{
+	"name": "Egg",
+	"type": "Protein",
+	"value": [6, 2, 3],
+	"count": 4,
+	"mod_text":"+1 each veg",
+	"mod":{},
+	"img":"egg.png"
+},
+{
+	"name": "Fish",
+	"type": "Protein",
+	"value": [1, 4, 6],
+	"count": 3,
+	"mod_text":"/-5 if played with cheese",
+	"mod":{},
+	"img":"fish.png"
+},
+{
+	"name": "Shrimp",
+	"type": "Protein",
+	"value": [1, 7, 7],
+	"count": 2,
+	"mod_text":"/-5 if played with cheese",
+	"mod":{},
+	"img":"shrimp.png"
+},
+{
+	"name": "Lobster",
+	"type": "Protein",
+	"value": [1, 8, 10],
+	"count": 1,
+	"mod_text":"/-5 if played with cheese",
+	"mod":{},
+	"img":"lobster.png"
+},
+{
+	"name": "Carrots",
+	"type": "Vegetable",
+	"value": [2, 4, 4],
+	"count": 3,
+	"mod_text":"",
+	"mod":{},
+	"img":"carrots.png"
+},
+{
+	"name": "Corn",
+	"type": "Vegetable",
+	"value": [2, 3, 4],
+	"count": 3,
+	"mod_text":"",
+	"mod":{},
+	"img":"corn.png"
+},
+{
+	"name": "Spinach",
+	"type": "Vegetable",
+	"value": [4, 4, 1],
+	"count": 3,
+	"mod_text":"",
+	"mod":{},
+	"img":"spinach.png"
+},
+{
+	"name": "Green beans",
+	"type": "Vegetable",
+	"value": [2, 2, 3],
+	"count": 3,
+	"mod_text":"",
+	"mod":{},
+	"img":"green beans.png"
+},
+{
+	"name": "Brussel sprouts",
+	"type": "Vegetable",
+	"value": [1, 3, 5],
+	"count": 3,
+	"mod_text":"",
+	"mod":{},
+	"img":"brussel sprouts.png"
+},
+{
+	"name": "Peppers",
+	"type": "Vegetable",
+	"value": [3, 4, 4],
+	"count": 3,
+	"mod_text":"",
+	"mod":{},
+	"img":"peppers.png"
+},
+{
+	"name": "Lettuce",
+	"type": "Vegetable",
+	"value": [3, 3, 3],
+	"count": 3,
+	"mod_text":"+1 each veg",
+	"mod":{},
+	"img":"lettuce.png"
+},
+{
+	"name": "Tomatoes",
+	"type": "Vegetable",
+	"value": [2, 4, 4],
+	"count": 3,
+	"mod_text":"+2 with pasta",
+	"mod":{},
+	"img":"tomatoes.png"
+},
+{
+	"name": "Broccoli",
+	"type": "Vegetable",
+	"value": [2, 3, 5],
+	"count": 3,
+	"mod_text":"",
+	"mod":{},
+	"img":"broccoli.png"
+},
+{
+	"name": "asparagus",
+	"type": "Vegetable",
+	"value": [3, 3, 5],
+	"count": 2,
+	"mod_text":"",
+	"mod":{},
+	"img":"asparagus.png"
+},
+{
+	"name": "Soy sauce",
+	"type": "Specials",
+	"value": [3, 3, 3],
+	"count": 1,
+	"mod_text":"+3 when paired with rice",
+	"mod":{},
+	"img":"soy sauce.png"
+},
+{
+	"name": "Ketchup",
+	"type": "Specials",
+	"value": [1, 1, 1],
+	"count": 1,
+	"mod_text":"+3 if paired with potato or burger or nuggets",
+	"mod":{},
+	"img":"ketchup.png"
+},
+{
+	"name": "BBQ sauce",
+	"type": "Specials",
+	"value": [1, 1, 1],
+	"count": 1,
+	"mod_text":"+3 when paired with beans or meat",
+	"mod":{},
+	"img":"bbq sauce.png"
+},
+{
+	"name": "Mayo",
+	"type": "Specials",
+	"value": [2, 2, 2],
+	"count": 1,
+	"mod_text":"",
+	"mod":{},
+	"img":"mayo.png"
+},
+{
+	"name": "Chili flakes",
+	"type": "Specials",
+	"value": [4, 4, 4],
+	"count": 1,
+	"mod_text":"",
+	"mod":{},
+	"img":"chili flakes.png"
+},
+{
+	"name": "Garlic",
+	"type": "Specials",
+	"value": [4, 4, 4],
+	"count": 1,
+	"mod_text":"+2 with pasta",
+	"mod":{},
+	"img":"garlic.png"
+},
+{
+	"name": "Avocado",
+	"type": "Specials",
+	"value": [4, 4, 4],
+	"count": 1,
+	"mod_text":"+2 with bread",
+	"mod":{},
+	"img":"avocado.png"
+},
+{
+	"name": "Butter",
+	"type": "Specials",
+	"value": [4, 4, 4],
+	"count": 1,
+	"mod_text":"+2 with lobster or bread",
+	"mod":{},
+	"img":"butter.png"
+}
+]

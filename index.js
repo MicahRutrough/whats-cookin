@@ -14,6 +14,11 @@ app.get('/', function (request, response) {
 //
 const CARDS_DEALT = [7,3,4,5]; //7 initally, 3 after breakfast, 4 after lunch, 5 after dinner
 const CARD_LIMITS = [3,4,5]; //brekkie/lunch/dinner play limits
+const VOTE_VALUE = 2;
+
+var fs = require("fs");
+const CARD_DECK = fs.readFileSync("cards/data/cards.json","utf8",'r');
+console.log("ready");
 //
 var ids = {}; //Keeping track of all user ids and socket objects {socketid:socket}
 var names = {}; //Keeping track of all player names: {socketid:name}
@@ -677,18 +682,26 @@ function end_game(host) {
 		scores[p] = games[host].players[p].score;
 	});
 	io.to(host+"_game").emit('end game', scores);
+	leave_game(host);
 }
 
 function tally_score(hand, votes, meal) {
-	//TODO:THIS
-	return 42;
+	score = 0;
+	hand.forEach((card)=>{
+		score += card.value[meal];
+	});
+	return score + (VOTE_VALUE*votes);
 }
 
 // --------------------//
 
 function new_deck() {
-	return []; //TODO: THIS
+	var deck = JSON.parse(CARD_DECK);
+	shuffle(deck);
+	return deck;
 }
+
+
 
 function new_game_object(game_name) {
 	return {players:{}, max_players:4, name:game_name, started:false, round:0, day:0, game_days:1, stage:0, deck:[], discard:[]};

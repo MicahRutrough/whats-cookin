@@ -1,0 +1,40 @@
+name,type,value,rarity,bonus,penalties,img
+Bread,Carbs,4 | 3 | 2,5,,,bread.png
+Rice,Carbs,3 | 3 | 3,5,,,rice.png
+Oat,Carbs,5|1|1,3,,,oat.png
+Potatoes,Carbs,3 | 3 | 3,5,,,potatoes.png
+Quinoa,Carbs,2|4|3,2,+2 each vegetable,,quinoa.png
+Pasta,Carbs,1 | 4 | 5,5,,,pasta.png
+Chips,Carbs,1 | 5 | 3,2,,,chips.png
+Tortilla,Carbs,1 | 3 | 5,2,,,tortilla.png
+Beans,Protein,1|3|3,3,+2 with rice,,beans.png
+Chicken,Protein,4 | 6 | 6,3,,,chicken.png
+Turkey,Protein,2 | 5 | 7,2,,,turkey.png
+Burger,Protein,1 | 5 | 5,3,"+1 for each tomato/lettuce",,burger.png
+Steak,Protein,4| 6 | 8,2,,,steak.png
+Chop,Protein,1 | 6 | 7,3,,,chop.png
+Bacon,Protein,5 | 4 | 3,3,+2 with eggs,,bacon.png
+Cheese,Protein,3|3|3,3,+2 with burger or chip,,cheese.png
+Tofu,Protein,1 | 4 | 6,2,,,tofu.png
+Egg,Protein,6 | 2 | 3,4,+1 each veg,,egg.png
+Fish,Protein,1 | 4 | 6,3,,-5 if played with cheese,fish.png
+Shrimp,Protein,1 | 7 | 7,2,,-5 if played with cheese,shrimp.png
+Lobster,Protein,1 | 8 | 10,1,,-5 if played with cheese,lobster.png
+Carrots,Vegetable,2 | 4 | 4,3,,,carrots.png
+Corn,Vegetable,2 | 3 | 4,3,,,corn.png
+Spinach,Vegetable,4 | 4 | 1,3,,,spinach.png
+Green beans,Vegetable,2 | 2 | 3,3,,,green beans.png
+Brussel sprouts,Vegetable,1 | 3 | 5,3,,,brussel sprouts.png
+Peppers,Vegetable,3 | 4 | 4,3,,,peppers.png
+Lettuce,Vegetable,3 | 3 | 3,3,+1 each veg,,lettuce.png
+Tomatoes,Vegetable,2 | 4 | 4,3,+2 with pasta,,tomatoes.png
+Broccoli,Vegetable,2 | 3 | 5,3,,,broccoli.png
+asparagus,Vegetable,3 | 3 | 5,2,,,asparagus.png
+Soy sauce,Specials,3,1,+3 when paired with rice,,soy sauce.png
+Ketchup,Specials,1,1,+3 if paired with potato or burger or nuggets,,ketchup.png
+BBQ sauce,Specials,1,1,+3 when paired with beans or meat,,bbq sauce.png
+Mayo,Specials,2,1,,,mayo.png
+Chili flakes,Specials,4,1,,,chili flakes.png
+Garlic,Specials,4,1,+2 with pasta,,garlic.png
+Avocado,Specials,4,1,+2 with bread,,avocado.png
+Butter,Specials,4,1,+2 with lobster or bread,,butter.png
