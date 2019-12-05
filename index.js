@@ -279,6 +279,7 @@ function start_game(socket_id) {
 		if (!games[socket_id].started) {
 			io.to(socket_id+"_game").emit('start game');
 			io.to(socket_id+"_game").emit('chat message',"Game started!");
+			games[socket_id].deck = new_deck();
 			games[socket_id].started = true;
 			
 			//Deal with dealing!
@@ -731,18 +732,3 @@ function new_offer_object(cards, recipient) {
 http.listen(3000, function() {
 	console.log("Listening on *:3000");
 });
-
-
-function dd(deck,discard,cardnumber) {
-	var dealt = [];
-	for (var i = 0; i < cardnumber; ++i) {
-		if (deck.length == 0) { //Reshuffle if needed
-			var temp = deck.concat(discard);
-			shuffle(temp);
-			deck = temp;
-			discard = [];
-		}
-		dealt.push(deck.pop());
-	}
-	return dealt;
-}
