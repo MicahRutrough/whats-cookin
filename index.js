@@ -607,6 +607,9 @@ function check_all_played(host) {
 			Object.keys(games[host].players).forEach((p)=>{
 				remove_cards_from_hand(p, games[host].players[p].play_hand);
 			});
+			Object.keys(games[host].players).forEach((p)=>{
+				ids[p].emit("player hand", JSON.stringify(games[host].players[p].hand))
+			});
 			io.to(host+"_game").emit('start round', 3);
 		}
 	}
@@ -703,7 +706,15 @@ function tally_score(hand, votes, meal) {
 // --------------------//
 
 function new_deck() {
-	var deck = JSON.parse(CARD_DECK);
+	var j = JSON.parse(CARD_DECK);
+	var _id = 0;
+	var deck = [];
+	j.forEach((cardt)=>{
+		for(var i = 0; i < cardt.count; ++i) {
+			deck.push({id:_id++, name:cardt.name, type:cardt.type, value:cardt.value, mod_text:cardt.mod_text, mod:cardt.mod, img:cardt.img});
+		}
+	});
+	
 	shuffle(deck);
 	return deck;
 }
