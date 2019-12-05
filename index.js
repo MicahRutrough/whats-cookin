@@ -288,9 +288,7 @@ function start_game(socket_id) {
 				deal_cards(p, CARDS_DEALT[0]);
 			});
 			
-			io.to(socket_id+"_game").emit('start day', 1);
-			io.to(socket_id+"_game").emit('start meal', 0);
-			io.to(socket_id+"_game").emit('start round', 1);
+			io.to(socket_id+"_game").emit('game state', {day:1, meal:0, round:1});
 		}
 		else {
 			ids[socket_id].emit('error message',202, "Cannot start a game that is already started!");
@@ -590,7 +588,7 @@ function check_all_ready(host) { //Triggered when someone marks ready -- is ever
 		}
 	});
 	if (check_ok) { //Everyone is ready
-		io.to(host+"_game").emit('start round', 2);
+		io.to(host+"_game").emit('game state', {day:games[host].day, meal:games[host].round, round:2});
 	}
 }
 
@@ -610,7 +608,7 @@ function check_all_played(host) {
 			Object.keys(games[host].players).forEach((p)=>{
 				ids[p].emit("player hand", JSON.stringify(games[host].players[p].hand))
 			});
-			io.to(host+"_game").emit('start round', 3);
+			io.to(host+"_game").emit('game state', {day:games[host].day, meal:games[host].round, round:3});
 		}
 	}
 }
@@ -665,8 +663,7 @@ function end_meal(host) {
 		end_day(host);
 	}
 	else {
-		io.to(host+"_game").emit('start meal', games[host].round);
-		io.to(host+"_game").emit('start round', 1); //Back to bartering!
+		io.to(host+"_game").emit('game state', {day:games[host].day, meal:games[host].round, round:1}); //Back to bartering!
 		games[host].stage = 1;
 	}
 	
@@ -678,9 +675,7 @@ function end_day(host) {
 		end_game(host);
 	}
 	else {
-		io.to(host+"_game").emit('start day', games[host].day);
-		io.to(host+"_game").emit('start meal', 0);
-		io.to(host+"_game").emit('start round', 1); //Back to bartering!
+		io.to(host+"_game").emit('game state', {day:games[host].day, meal:0, round:1}); //Back to bartering!
 		games[host].round = 0; //Reset to breakfast!
 		games[host].stage = 1; //Reset to bartering
 	}
