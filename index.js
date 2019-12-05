@@ -120,6 +120,7 @@ io.on('connection', function(socket){
 		set_play_hand(socketid, cards, description);
 	});
 	socket.on('vote hand', function(username){
+	socket.on('vote hand', function(username){
 		vote_hand(socketid, username);
 	});
 	
@@ -253,11 +254,15 @@ function leave_game(socket_id) {
 			remove_all_from_game(host);
 			delete games[host];
 		}
-		ids[socket_id].leave(host+"_game");
+		if (socket_id in ids) {
+			ids[socket_id].leave(host+"_game");
+		}
 		delete ingame[socket_id];
 	}
 	else {
-		ids[socket_id].emit('error message',204, "You aren't in any games right now!");
+		if (socket_id in ids) {
+			ids[socket_id].emit('error message',204, "You aren't in any games right now!");
+		}
 	}
 }
 
