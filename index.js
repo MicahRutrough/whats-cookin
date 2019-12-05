@@ -283,6 +283,7 @@ function start_game(socket_id) {
 			io.to(socket_id+"_game").emit('chat message',"Game started!");
 			games[socket_id].deck = new_deck();
 			games[socket_id].started = true;
+			games[socket_id].stage = true;
 			//Deal with dealing!
 			Object.keys(games[socket_id].players).forEach((p)=>{
 				deal_cards(p, CARDS_DEALT[0]);
