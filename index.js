@@ -120,7 +120,6 @@ io.on('connection', function(socket){
 		set_play_hand(socketid, cards, description);
 	});
 	socket.on('vote hand', function(username){
-	socket.on('vote hand', function(username){
 		vote_hand(socketid, username);
 	});
 	
@@ -131,6 +130,7 @@ io.on('connection', function(socket){
 		lobby_disconnect(socketid);
 	});
 });
+
 //
 function lobby_join(socket_id, name) {
 	var check_ok = true;
