@@ -111,13 +111,13 @@ io.on('connection', function(socket){
 		mark_ready(socketid, done);
 	});
 	socket.on('give cards', function(cards, recip_name){
-		give_cards(socketid, cards, recip_name);
+		give_cards(socketid, JSON.parse(cards), recip_name);
 	});
 	socket.on('accept cards', function(giver_name){
 		give_cards(socketid, giver_name);
 	});
 	socket.on('set play hand', function(cards, description){
-		set_play_hand(socketid, cards, description);
+		set_play_hand(socketid, JSON.parse(cards), description);
 	});
 	socket.on('vote hand', function(username){
 		vote_hand(socketid, username);
@@ -355,7 +355,7 @@ function give_cards(socket_id, cards, recipient_name) {
 						if (hand_subset(cards, games[host].players[socket_id].hand)) {
 							if (cards.length > 0) {
 								cardoffers[socket_id] = new_offer_object(cards, recip_socket_id);
-								ids[recip_socket_id].emit('cards offered',cards, names[socket_id]);
+								ids[recip_socket_id].emit('cards offered',JSON.stringify(cards), names[socket_id]);
 							}
 							else {
 								delete cardoffers[socket_id];
@@ -576,7 +576,7 @@ function deal_cards(player, number) {
 	var p_socket = ids[player];
 	var new_hand = deck_deal(host, number);
 	games[host].players[player].hand.concat(new_hand);
-	p_socket.emit('deal cards', new_hand);
+	p_socket.emit('deal cards', JSON.stringify(new_hand));
 }
 
 function check_all_ready(host) { //Triggered when someone marks ready -- is everybody marked ready
@@ -706,8 +706,6 @@ function new_deck() {
 	return deck;
 }
 
-
-
 function new_game_object(game_name) {
 	return {players:{}, max_players:4, name:game_name, started:false, round:0, day:0, game_days:1, stage:0, deck:[], discard:[]};
 		//Round = 0,1,2 = breakfast, lunch, dinner -- aka meal
@@ -733,3 +731,18 @@ function new_offer_object(cards, recipient) {
 http.listen(3000, function() {
 	console.log("Listening on *:3000");
 });
+
+
+function dd(deck,discard,cardnumber) {
+	var dealt = [];
+	for (var i = 0; i < cardnumber; ++i) {
+		if (deck.length == 0) { //Reshuffle if needed
+			var temp = deck.concat(discard);
+			shuffle(temp);
+			deck = temp;
+			discard = [];
+		}
+		dealt.push(deck.pop());
+	}
+	return dealt;
+}
