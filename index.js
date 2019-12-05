@@ -1,3 +1,5 @@
+const PORT = process.env.PORT || 5000;
+//
 const express_lib = require('express');
 const http_lib = require('http');
 const path_lib = require('path');
@@ -729,6 +731,6 @@ function new_offer_object(cards, recipient) {
 	return {cards:cards, recipient:recipient};
 }
 //
-http.listen(3000, function() {
-	console.log("Listening on *:3000");
+http.listen(PORT, function() {
+	console.log("Listening on *:"+PORT);
 });
